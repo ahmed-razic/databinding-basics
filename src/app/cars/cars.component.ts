@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CarsComponent implements OnInit {
   addCar: boolean = true;
   buttonLabel: string = 'Add Other Car';
+  carAdded: string = 'Car was NOT added!';
 
   constructor() {
     setTimeout(() => {
@@ -16,4 +17,8 @@ export class CarsComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  onCarAdded() {
+    this.carAdded = 'Car WAS added!';
+  }
 }
