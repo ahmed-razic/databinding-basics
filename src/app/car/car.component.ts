@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CarComponent implements OnInit {
   ID: Date;
   carName: string = 'Golf';
+  carYear: string;
+  carColor: string = 'green';
 
   constructor() {
     this.ID = new Date();
@@ -17,5 +19,9 @@ export class CarComponent implements OnInit {
 
   getID() {
     return this.ID.getSeconds();
+  }
+
+  setYear(event: Event) {
+    this.carYear = (<HTMLInputElement>event.target).value;
   }
 }

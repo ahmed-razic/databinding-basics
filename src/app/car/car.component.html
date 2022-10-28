@@ -1,2 +1,8 @@
 <p>{{ "My new " }} car is {{ carName }} with ID {{ getID() }}</p>
 <p>{{ getID() > 30 ? "More than 30 sec" : "Less than 30 s" }}</p>
+<hr />
+<input type="text" (input)="setYear($event)" />
+<p>{{ carYear }}</p>
+<hr />
+<input type="text" [(ngModel)]="carColor" />
+<p>{{ carColor }}</p>
