@@ -1,0 +1,24 @@
+<div class="container">
+  <hr />
+  <p>ngif-directive works!</p>
+  <br />
+
+  <input type="text" class="form-control" [(ngModel)]="userName" />
+  <button class="btn btn-secondary" (click)="onDisplayName()">
+    Display Name
+  </button>
+  <br />
+  <p *ngIf="userNameExists; else defaultText">{{ userName }}</p>
+  <ng-template #defaultText> <p>This is a default text</p> </ng-template>
+
+  <hr />
+  <p [ngStyle]="{ backgroundColor: getColor() }">dadasd</p>
+  <p [ngStyle]="{ backgroundColor: getColor() }">gfgdf</p>
+  <p [ngStyle]="{ backgroundColor: getColor() }" [ngClass]="{ first: true }">
+    hjghjghj
+  </p>
+
+  <p [ngStyle]="{ first: true }">hjghjghj</p>
+
+  <p>{{ randomNumber }}</p>
+</div>
