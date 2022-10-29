@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+        <li class="list-group-item active">Add input field</li>
+        <li class="list-group-item">Output useername</li>
+        <li class="list-group-item">Add a button</li>
+        <li class="list-group-item">Reset useranme</li>
+      </ul>
+      <hr />
+      <input type="text" class="form-control" [(ngModel)]="userName" />
+      <p>{{ userName }}</p>
+      <br />
+      <button
+        class="btn btn-primary"
+        [disabled]="userName === ''"
+        (click)="onReset()"
+      >
+        Reset User
+      </button>
+    </div>
+  </div>
+</div>
